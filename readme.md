@@ -65,5 +65,24 @@ You simply import the letter.  e.g. ```import {T} from 'alphabit';```
 Or if you want to import several: ```import {D,O,T} from 'alphabit';```
 
 
+## Using the Functions
+
+Documentation for all utilities is right... [here](TBD)
+
+Or you can just read the code.  Up to you.
+
+For an example usage, lets try that function that
+gets a substring from the start:
+
+    import {T} from 'alphabit';
+    
+    const song = "It's a long way to Tipperary, it's a long way to go."; 
+    const howFar = T.left( song, 34 );
+    
+    
+    
+
+
+
 
 
