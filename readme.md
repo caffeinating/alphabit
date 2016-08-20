@@ -57,10 +57,10 @@ in practice.
 
 You simply import the letter.  e.g. ```import {T} from 'alphabit';```
 
-# D - Dates
-# E - Entities (meaning objects that come from somewhere else)
-# O - Objects
-# T - Text
+* D - Dates
+* E - Entities (meaning objects that come from somewhere else)
+* O - Objects
+* T - Text
 
 Or if you want to import several: ```import {D,O,T} from 'alphabit';```
 
