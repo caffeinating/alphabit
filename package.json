@@ -2,7 +2,7 @@
   "name": "alphabit",
   "version": "0.0.2",
   "description": "Little bits of js code, exported as letters of the alphabet",
-  "main": "lib/index.js",
+  "main": "./src/index.es6",
   "author": "Rick Sanderson",
   "private" : false,
   "license": "Apache-2.0",
