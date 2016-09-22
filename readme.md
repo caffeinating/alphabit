@@ -1,6 +1,17 @@
 # alphabit
 
-A small but growing bit of JS code namespaced by the alphabet.
+A small but growing bit of JS code name-spaced by the alphabet.
+
+## WARNING !!
+
+This code library is in development.   It's alpha.   It's not yet stable,
+because we really haven't fleshed much out.  So, unless you're a 
+Rezometor, please don't use this library.  Not yet.  We'll
+remove this warning when we think it will live up to our 
+commitment of a forever backward compatible library of code.
+
+
+## Overview
 
 The utilities are meant to be generally useful pure functions, suitable
 across a wide variety of projects.   The library favors the opinion that
