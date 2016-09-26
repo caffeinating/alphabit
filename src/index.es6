@@ -7,6 +7,9 @@ export { _dates as D};
 import _DateRange from './DateRange';
 export { _DateRange as DateRange};
 
+import * as _colls from './collections';
+export { _colls as C};
+
 import * as _entities from './entities';
 export { _entities as E};
 

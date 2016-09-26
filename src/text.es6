@@ -57,3 +57,19 @@ export function textValueExcludes( value, exclude ) {
     return value && (value.length>0) && (value !== exclude);
 }
 
+/**
+ * Simple format function.  First arg is the string, subsequent
+ * are values that replace placeholders in the string.
+ *
+ * Placeholders are numbered, like this {0}, {1}...
+ *
+ * @returns {String}
+ */
+export function format() {
+    var formatted = arguments[0];
+    for (var i = 1; i < arguments.length; i++) {
+        var regexp = new RegExp('\\{'+(i-1)+'\\}', 'gi');
+        formatted = formatted.replace(regexp, arguments[i]);
+    }
+    return formatted;
+}

@@ -20,12 +20,26 @@ export function equals( o1, o2 ) {
     return deepEqual( o1, o2 );
 }
 
-export function emptyObject( o ) {
-    return o==null || (Object.keys( o ).length === 0 );
+/**
+ * True if o is an object.
+ */
+export function isObject( o ) {
+    return o === Object(o);
 }
 
+/**
+ * True if o is null, or an object without any keys (i.e. properties).
+ */
+export function emptyObject( o ) {
+    return o==null || (isObject(o) && Object.keys( o ).length === 0 );
+}
+
+/**
+ * Any kind of empty thing: String, Array, or Object
+ * @param o an instance of some javascript type (i.e. a thing)
+ */
 export function empty( o ) {
-    return o==null || o.length==0;  // this works on strings and arrays; not objects
+    return o==null || o.length==0 || emptyObject(o);
 }
 
 /**
