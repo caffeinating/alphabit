@@ -10,6 +10,9 @@ export { _DateRange as DateRange};
 import * as _colls from './collections';
 export { _colls as C};
 
+import * as _l16n from './localization';
+export { _l16n as L};
+
 import * as _entities from './entities';
 export { _entities as E};
 
