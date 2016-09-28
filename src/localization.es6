@@ -1,5 +1,5 @@
 
-import {T}      from 'alphabit';
+import * as T from './text';
 
 
 // first is IE, 2nd others.
