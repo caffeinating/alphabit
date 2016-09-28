@@ -1,9 +1,6 @@
 
 "use strict";
 
-import deepEqual from 'deep-equal';
-
-
 export function toMap( o ) {
     let map = Object.create( null );
     if ( o != null ) {
@@ -114,4 +111,10 @@ export function cloneExcluding( obj, ...excludedProps ) {
  */
 export function resolve( state, path ) {
     return path.split('.').reduce( (o,i)=>o[i], state );
+}
+
+
+export function deepEqual( o1, o2 ) {
+    if ( o1===o2 ) return true;
+
 }
