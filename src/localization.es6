@@ -8,15 +8,32 @@ import * as T from './text';
 const lang = T.left( window.navigator.userLanguage || window.navigator.language,2);
 
 
+// Set the labels bundle for a language
+export const addLabels = ( lang, bundle ) => {
+    if ( labelBundle[lang] ) {
+        labelBundle[lang] = Object.assign(labelBundle[lang], bundle);
+    }
+    else {
+        labelBundle[lang] = bundle;
+    }
+};
 
-// Later, we will load bundles from a text file, specific to a tenant
 const labelBundle = {
     en : {
         namePrefix:"Prefix"
     }
 };
 
-// Later, we will load bundles from a text file, specific to a tenant
+// Set the text bundle for a language
+export const addText = ( lang, bundle ) => {
+    if ( textBundle[lang] ) {
+        textBundle[lang] = Object.assign(textBundle[lang], bundle);
+    }
+    else {
+        textBundle[lang] = bundle;
+    }
+};
+
 const textBundle = {
     en : {
         hello:"Hello"
@@ -48,8 +65,3 @@ export function txt( value ) {
     return result || value;
 }
 
-
-export default {
-    lbl,
-    txt
-}

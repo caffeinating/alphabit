@@ -1,6 +1,8 @@
 
 "use strict";
 
+import deepEqual from 'deep-equal';
+
 export function toMap( o ) {
     let map = Object.create( null );
     if ( o != null ) {
@@ -13,6 +15,9 @@ export function toMap( o ) {
     }
 }
 
+/**
+ * Performs a deep equality check of the 2 objects
+ */
 export function equals( o1, o2 ) {
     return deepEqual( o1, o2 );
 }
@@ -80,6 +85,10 @@ export function containsText( o, text ) {
 }
 
 
+export function isNullish( o ) {
+    return o===null || o===undefined;
+}
+
 /**
  * Return true if any of the object's own properties
  * contains the given text, ignoring case.
@@ -114,7 +123,16 @@ export function resolve( state, path ) {
 }
 
 
-export function deepEqual( o1, o2 ) {
-    if ( o1===o2 ) return true;
-
-}
+// export function deepEqual( o1, o2 ) {
+//     // First, see if there is equality by reference
+//     if ( o1===o2 ) return true;
+//     if (o1 instanceof Date && o2 instanceof Date) {
+//         return o1.getTime() === o2.getTime();
+//     }
+//     // Check if not an object...
+//     if ( !o1 || !o2 || typeof o1 != 'object' || typeof o2 != 'object' ) {
+//         // we're saying equal value is OK, allowing for coersion.
+//         return o1==o2;
+//     }
+//     THIS IS INCOMPLETE...
+// }
