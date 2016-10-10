@@ -22,6 +22,6 @@ export { _objects as O};
 import * as _text from './text';
 export { _text as T};
 
-import _validators from './validators';
+import * as _validators from './validators';
 export { _validators as validators};
 
